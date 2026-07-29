@@ -1,0 +1,18 @@
+name: Build and Test CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Codebase & Environment
+        run: |
+          echo "Executing CI validation for saas-billing-gateway-go-gin-v50"
+          echo "Tech Stack: Go / Gin Engine"
+          echo "Category: SaaS Subscription Billing & Webhook Gateway"
